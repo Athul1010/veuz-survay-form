@@ -13,7 +13,7 @@ import OnePagePerQuestion from './Components/OnePagePerQuestion';
 function App() {
   const [start, setStart] = useState(false);
   const [reset, setReset] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(300);
+  const [timeLeft, setTimeLeft] = useState(30); // 5 minutes in seconds
   const [isTimeout, setIsTimeout] = useState(false);
 
   useEffect(() => {
@@ -26,6 +26,8 @@ function App() {
           if (prevTime <= 1) {
             clearInterval(timer);
             setIsTimeout(true);
+            
+            window.location.reload();
             return 0;
           }
           return prevTime - 1;
@@ -37,14 +39,13 @@ function App() {
   }, [start, timeLeft]);
 
   const triggerCounter = () => {
-    console.log('Timer triggered');
-    setTimeLeft(300);
-    setStart(true);
-    setReset(false);
-
+    setTimeLeft(30); // Reset time
+    setStart(true); // Start timer
+    setIsTimeout(false); // Reset timeout flag
+    setReset(true); // Set reset to true to trigger countdown reset
   };
 
-return (
+  return (
     <BrowserRouter>
       <Countdown start={start} reset={reset} timeLeft={timeLeft} />
       {isTimeout && (
@@ -65,3 +66,4 @@ return (
 }
 
 export default App;
+
