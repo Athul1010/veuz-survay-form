@@ -7,7 +7,7 @@ const Home = ({ triggerCounter }) => {
 
   const handleStart = (formId) => {
     triggerCounter();
-    navigate(`/form/${formId}`);
+    navigate(`/form/${formId}`); 
   };
 
   console.log(formData);
