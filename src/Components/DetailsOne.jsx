@@ -27,7 +27,7 @@ const DetailsOne = () => {
 
   return (
     <div className="container py-5">
-      <h1 className='text-center mb-4'>Enter your personal details</h1>
+      <h1 className='text-center mb-4 mt-4'>Enter your personal details</h1>
       <form onSubmit={handleSubmit} className="row g-4">
         {initialFields.map((field) => (
           <div key={field.fieldId} className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
@@ -104,15 +104,7 @@ const DetailsOne = () => {
                   <label className="form-check-label">{field.label}</label>
                 </div>
               )}
-              {/* {field.type === 'textarea' && (
-                <textarea
-                  className="form-control"
-                  name={field.fieldId}
-                  placeholder={field.placeholder}
-                  required={field.required}
-                  onChange={handleChange}
-                />
-              )} */}
+              
             </div>
           </div>
         ))}

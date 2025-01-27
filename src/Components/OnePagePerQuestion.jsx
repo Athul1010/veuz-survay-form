@@ -60,7 +60,7 @@ const OnePagePerQuestion = () => {
     <div className="container mt-5">
       <div className="row justify-content-center">
         <div className="col-xl-6 col-lg-8 col-md-10 col-sm-12">
-          <div className="card shadow-sm">
+          <div className="card shadow-sm mt-5">
             <div className="card-body">
               <h2 className="text-center mb-4">{currentQuestion.label}</h2>
               {currentQuestion.type === 'textbox' && (

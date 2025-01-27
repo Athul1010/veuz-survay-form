@@ -35,7 +35,7 @@ const TypeList = () => {
     <div className="container mt-4">
       <div className="row justify-content-center">
         <div className="col-xl-6 col-lg-7 col-md-8 col-sm-10">
-          <div className="card shadow-sm p-4">
+          <div className="card shadow-sm p-4 mt-5">
             <h2 className="text-center mb-4">Select Type of Listing</h2>
             <form onSubmit={handleSubmit}>
               {formData.map((form, index) => (
