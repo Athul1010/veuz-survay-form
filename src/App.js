@@ -13,7 +13,7 @@ import OnePagePerQuestion from './Components/OnePagePerQuestion';
 function App() {
   const [start, setStart] = useState(false);
   const [reset, setReset] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(30); // 5 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(300); 
   const [isTimeout, setIsTimeout] = useState(false);
 
   useEffect(() => {
@@ -39,10 +39,10 @@ function App() {
   }, [start, timeLeft]);
 
   const triggerCounter = () => {
-    setTimeLeft(30); // Reset time
-    setStart(true); // Start timer
-    setIsTimeout(false); // Reset timeout flag
-    setReset(true); // Set reset to true to trigger countdown reset
+    setTimeLeft(300); 
+    setStart(true); 
+    setIsTimeout(false); 
+    setReset(true); 
   };
 
   return (
